@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+python-jose
+passlib[bcrypt]
+jinja2
+pydantic
