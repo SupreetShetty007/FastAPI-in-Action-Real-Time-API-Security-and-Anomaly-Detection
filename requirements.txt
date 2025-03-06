@@ -4,3 +4,5 @@ python-jose
 passlib[bcrypt]
 jinja2
 pydantic
+bcrypt==4.0.1
+python-multipart
