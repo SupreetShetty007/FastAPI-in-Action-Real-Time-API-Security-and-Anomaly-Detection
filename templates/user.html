@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        #logoutButton {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #logoutButton:hover {
+            background-color: #c0392b;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome User!</h1>
+        <button id="logoutButton">Logout</button>
+    </div>
+    <img src="\static\Hamster thumbs up.jpg" alt="Welcome Image">
+    <script>
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('jwtToken');
+            window.location.href = '/login';
+        });
+    </script>
+</body>
+</html>
